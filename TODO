@@ -1,0 +1,22 @@
+* add group_by columns
+
+    tabular data is often organized into many rows of data, grouped by
+    one or more column values (the sub-rows may then be sorted, but that's
+    another feature).
+
+    eg: group_by=['header1', 'header2', ..]  # specify column names
+     or group_by=[0, 1]                      # use origin-0 column indexes
+
+    causes visual breaks in the presentation
+    use "groupendline=" and "groupstartline=", but only if "group_by" present
+
+* add sort_by columns
+
+    much data is sorted by multiple columns, and tabulate should be able to
+    help manage this without requiring multiple indexes to be prepared by the
+    developer
+
+    usage: sort_by=['map', 'order']
+       or: sort_by=[0, 1]
+
+    causes data to be indexed and ordered by the given sort columns
